@@ -7,6 +7,7 @@ import streamlit as st
 def get_data():
     return pd.read_csv("venture_capital.csv")
 
+st.set_page_config(page_title="App Jornada", page_icon="🔮")
 
 # função para treinar o modelo
 def train_model():
@@ -35,6 +36,14 @@ data = get_data()
 
 # treinando o modelo
 model = train_model()
+
+
+st.sidebar.markdown("Redes Sociais :")
+st.sidebar.markdown(
+    "- [![Linkedin Badge](https://img.shields.io/badge/-%40robertoricci-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/roberto-carlos-ricci)](https://www.linkedin.com/in/roberto-carlos-ricci/)")
+
+st.sidebar.markdown("- [![Portifolio Badge](https://img.shields.io/badge/-portif%C3%B3lio-yellow?style=flat-square&logo=powerbi&logoColor=white&link=https://robertoricci.github.io/pbisolutions.github.io/)](https://robertoricci.github.io/pbisolutions.github.io/)")
+
 
 # título
 st.title("Indicação de Investimento em Startup - PBI Soluções")
